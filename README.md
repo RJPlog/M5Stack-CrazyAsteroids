@@ -18,3 +18,9 @@ Here some stuff (only for me) to remember the necessary steps for changes:
 - git add .
 - git commit -m "message"
 - git push  // local changes will be uploaded
+
+If I have made some changes localy which I do not want to commit but restore the original files from github this worked for me:
+- git stash
+- git pull origin master
+
+Hint: having README.md open in MSWord leads to adding a temporary file on the repository --> close MSWord before adding
