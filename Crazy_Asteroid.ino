@@ -1,4 +1,4 @@
-// Crazy Asteroids by RJPlog
+// CrazyAsteroids by RJPlog
 // 21.6.2018
 
 #include <M5Stack.h>
