@@ -9,7 +9,7 @@ Here some stuff (only for me) to remember the necessary steps for changes:
 - open terminal
 - change to directory of Crazy_Asteroids
 - cd C:\Users....\Crazy_Asteroid
-- git pull  // download the acutal files form github
+- git pull  // download the acutal files from github
 - make your changes
 - git add .
 - git commit -m "message"
