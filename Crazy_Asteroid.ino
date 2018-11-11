@@ -1,4 +1,4 @@
-// Crazy Asteroids bei RJPlog
+// Crazy Asteroids by RJPlog
 // 21.6.2018
 
 #include <M5Stack.h>
@@ -496,21 +496,7 @@ void loop() {
         LevelPosPlus = 170;
       }
       M5.Lcd.print(z / 20);
-      // M5.Lcd.print(help2); // nur debugging
       M5.Lcd.setRotation(1);
-
-
-
-      /*    if (z > 600) {
-            Asteroid1Vel = 6;
-            Asteroid2Vel = 8;
-            Asteroid3Vel = 5;
-          }
-          if (z > 1200) {
-            Asteroid1Vel = 7;
-            Asteroid2Vel = 9;
-            Asteroid3Vel = 6;
-          } */
       break;
     }
   }
@@ -572,37 +558,11 @@ void printSpaceShip()  {
     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
   };
-  /*unsigned int SpaceShip [][SpaceShipW] = {
-    {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 3, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 1, 2, 3, 3, 3, 2, 1, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 3, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 1, 1, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 5, 5, 5, 1, 5, 5, 5, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 1, 5, 1, 1, 5, 1, 1, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 1, 5, 1, 1, 5, 5, 1, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 1, 5, 1, 1, 5, 1, 1, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 1, 1, 5, 1, 1, 5, 1, 1, 1, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-    }; // my SpaceShip */
 
   for (i = 0; i < SpaceShipH; i = i + 1) {
     for (j = 0; j < SpaceShipW; j = j + 1) {
       if (SpaceShip[i][j] != 0) {
         if (SpaceShip[i][j] == 1) {
-          /*       M5.Lcd.drawPixel(PosSpaceShip + j * 2, TFTH - SpaceShipH * 2 - SpaceShipGap + i * 2, M5.Lcd.color565(211, 211, 211));
-                 M5.Lcd.drawPixel(PosSpaceShip + j * 2 + 1, TFTH - SpaceShipH * 2 - SpaceShipGap + i * 2, M5.Lcd.color565(211, 211, 211));
-                 M5.Lcd.drawPixel(PosSpaceShip + j * 2, TFTH - SpaceShipH * 2 - SpaceShipGap + i * 2 + 1, M5.Lcd.color565(211, 211, 211));
-                 M5.Lcd.drawPixel(PosSpaceShip + j * 2 + 1, TFTH - SpaceShipH * 2 - SpaceShipGap + i * 2 + 1, M5.Lcd.color565(211, 211, 211)); */
           M5.Lcd.drawPixel(PosSpaceShip + j * 2, TFTH - SpaceShipH * 2 + i * 2 - LevelPosPlus, M5.Lcd.color565(238, 213, 183));
           M5.Lcd.drawPixel(PosSpaceShip + j * 2 + 1, TFTH - SpaceShipH * 2 + i * 2 - LevelPosPlus, M5.Lcd.color565(238, 213, 183));
           M5.Lcd.drawPixel(PosSpaceShip + j * 2, TFTH - SpaceShipH * 2 + i * 2 + 1 - LevelPosPlus, M5.Lcd.color565(238, 213, 183));

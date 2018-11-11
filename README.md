@@ -10,6 +10,7 @@ Here some stuff for me to remember the necessary steps for changes:
 - change to directory of Crazy_Asteroids
 - cd C:\Users....\Crazy_Asteroid
 - git pull  // download the acutal files form github
+- make your changes
 - git add .
 - git commit -m "message"
 - git push  // local changes will be uploaded
