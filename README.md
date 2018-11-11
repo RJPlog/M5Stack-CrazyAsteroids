@@ -2,7 +2,7 @@
 Simple game to check M5Stack's and my skills
 
 <p align="center">
- <img src="https://github.com/RJPlog/M5Stack-CrazyAsteroids/screenshot.jpg" width="250">
+ <img src="https://github.com/RJPlog/M5Stack-CrazyAsteroids/blob/master/screenshot.jpg" width="250">
 </p>
 
 I started my first programming experience with a C64 in the early 1980ies. I always had the dream to program a little game, but I never managed in my youth. 
