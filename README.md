@@ -1,6 +1,10 @@
 # M5Stack-CrazyAsteroids
 Simple game to check M5Stack's and my skills
 
+<p align="center">
+ <img src="https://github.com/RJPlog/M5Stack-CrazyAsteroids/screenshot.PNG" width="250">
+</p>
+
 I started my first programming experience with a C64 in the early 1980ies. I always had the dream to program a little game, but I never managed in my youth. 
 Recently I started thinking about to teach my children something about programming, and a colleague recommended the M5Stack to me. So I started to do some exercises. Even if my children are not very interested in programming now, at least they played this game with some fun.
 Now I am interested in learning something about github, so I will use this as a project to do some further exercises.
