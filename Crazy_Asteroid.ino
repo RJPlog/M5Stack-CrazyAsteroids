@@ -26,7 +26,7 @@ int DistanceY = 0;
 bool CollisionDistance = false;
 
 int help1 = 0;
-int help2 = 0;
+
 int CountHit = 0;
 
 int BoostColor = 0;
@@ -105,7 +105,7 @@ void setup() {
   pinMode(35, INPUT);                 // initializing random generator
   randomSeed(analogRead(35) * 10);    // initializing random generator
 
-  startEntrySequence();  // print Startbildschirm
+  startEntrySequence();  // print start screen
 }
 
 void loop() {
@@ -260,8 +260,6 @@ void loop() {
     CollisionDistance = false;
   }
 
-  help1 = CollisionDistance;
-
   // draw Asteroids
 
   printAsteroid1();
@@ -397,104 +395,18 @@ void loop() {
       M5.Lcd.print("Score: ");
       M5.Lcd.setTextColor(M5.Lcd.color565(117, 117, 117));
       M5.Lcd.print(z / 20);
-      // M5.Lcd.print(help2); // nur debugging
       M5.Lcd.setTextColor(RED);
       M5.Lcd.setCursor(10, 290);
       M5.Lcd.print("Score: ");
       z = z + 1;
-      if (z == 100) {
-        LevelPosPlus = 25;
+
+
+      // spaceship will move forward every 100 cycles, calculation of y offset depending on time
+
+      if (z % 100 == 0 && z < 2900) {
+        LevelPosPlus = 20 + (z / 100) * 5;
       }
-      if (z == 200) {
-        LevelPosPlus = 30;
-      }
-      if (z == 300) {
-        LevelPosPlus = 35;
-        Level = -2;
-      }
-      if (z == 400) {
-        LevelPosPlus = 40;
-      }
-      if (z == 500) {
-        LevelPosPlus = 45;
-      }
-      if (z == 600) {
-        LevelPosPlus = 50;
-        Level = -1;
-      }
-      if (z == 700) {
-        LevelPosPlus = 55;
-      }
-      if (z == 800) {
-        LevelPosPlus = 60;
-      }
-      if (z == 900) {
-        LevelPosPlus = 65;
-        Level = 0;
-      }
-      if (z == 1000) {
-        LevelPosPlus = 70;
-      }
-      if (z == 1100) {
-        LevelPosPlus = 75;
-      }
-      if (z == 1200) {
-        LevelPosPlus = 80;
-        Level = 1;
-      }
-      if (z == 1300) {
-        LevelPosPlus = 85;
-      }
-      if (z == 1400) {
-        LevelPosPlus = 90;
-      }
-      if (z == 1500) {
-        LevelPosPlus = 95;
-        Level = 2;
-      }
-      if (z == 1600) {
-        LevelPosPlus = 100;
-      }
-      if (z == 1700) {
-        LevelPosPlus = 105;
-      }
-      if (z == 1800) {
-        LevelPosPlus = 115;
-        Level = 3;
-      }
-      if (z == 1900) {
-        LevelPosPlus = 120;
-      }
-      if (z == 2000) {
-        LevelPosPlus = 125;
-      }
-      if (z == 2100) {
-        LevelPosPlus = 130;
-        Level = 4;
-      }
-      if (z == 2200) {
-        LevelPosPlus = 135;
-      }
-      if (z == 2300) {
-        LevelPosPlus = 140;
-      }
-      if (z == 2400) {
-        LevelPosPlus = 145;
-        Level = 5;
-      }
-      if (z == 2500) {
-        LevelPosPlus = 155;
-      }
-      if (z == 2600) {
-        LevelPosPlus = 160;
-      }
-      if (z == 2700) {
-        LevelPosPlus = 165;
-        Level = 6;
-      }
-      if (z == 2800) {
-        LevelPosPlus = 170;
-      }
+
       M5.Lcd.print(z / 20);
       M5.Lcd.setRotation(1);
       break;
