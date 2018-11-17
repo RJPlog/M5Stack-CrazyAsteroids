@@ -1,7 +1,7 @@
 // print start screen
 // wait for pushing "B" to start game
 
-void startEntrySequence() {
+void startEntrySection() {
   M5.Lcd.fillScreen(BLACK);
   M5.Lcd.setTextColor(M5.Lcd.color565(255, 131, 250));
   M5.Lcd.setTextSize(3);
