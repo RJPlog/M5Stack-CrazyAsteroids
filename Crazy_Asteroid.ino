@@ -29,8 +29,6 @@ int help1 = 0;
 
 int CountHit = 0;
 
-int BoostColor = 0;
-
 #define Asteroid1H      20     // screen height SpaceShip
 #define Asteroid1W      11     // screen width SpaceShip
 #define Asteroid1Gap    10     // hight SpaceShip over Ground

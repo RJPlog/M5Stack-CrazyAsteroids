@@ -1,4 +1,5 @@
 void printAsteroid1() {
+
   int Asteroid1 [][Asteroid1W] = {
     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
