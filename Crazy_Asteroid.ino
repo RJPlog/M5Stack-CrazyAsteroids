@@ -259,11 +259,8 @@ void loop() {
   }
 
   // draw Asteroids
-
   printAsteroid1();
-
   printAsteroid2();
-
   printAsteroid3();
 
   PosSpaceShipOld = PosSpaceShip;
@@ -272,38 +269,35 @@ void loop() {
   PosAsteroid2Old = PosAsteroid2;
   PosAsteroid3Old = PosAsteroid3;
 
+
+  // spaceship will move forward every 100 cycles, calculation of y offset depending on time
+  if (z % 100 == 0 && z < 2900) {
+    LevelPosPlus = 20 + (z / 100) * 5;
+  }
+
+  // update score (score will be the seconds survived by the spaceship without collision
+  z = z + 1;
+
+
+  // print score
+  M5.Lcd.fillRect(265, 1, 55, 240, M5.Lcd.color565(117, 117, 117));
+  M5.Lcd.setRotation(0);
+  M5.Lcd.setTextSize(3);
+  M5.Lcd.setCursor(10, 290);
+  M5.Lcd.print("Score: ");
+  M5.Lcd.print(z / 20);
+  M5.Lcd.setRotation(1);
+
+  // check exit conditions
+  if (CollisionDistance || z == 3000) {
+    startExitSection();
+  }
+
   // ----------------------
   // task handling
   // ----------------------
-
-  //adjustment of task
   while (1) {
     if (millis() - timeframe > 50) {
-      if (CollisionDistance || z == 3000) {
-        startExitSection();
-      }
-      
-      M5.Lcd.setRotation(0);
-      M5.Lcd.setTextSize(3);
-      M5.Lcd.setCursor(10, 290);
-      M5.Lcd.setTextColor(RED);
-      M5.Lcd.print("Score: ");
-      M5.Lcd.setTextColor(M5.Lcd.color565(117, 117, 117));
-      M5.Lcd.print(z / 20);
-      M5.Lcd.setTextColor(RED);
-      M5.Lcd.setCursor(10, 290);
-      M5.Lcd.print("Score: ");
-      z = z + 1;
-
-
-      // spaceship will move forward every 100 cycles, calculation of y offset depending on time
-
-      if (z % 100 == 0 && z < 2900) {
-        LevelPosPlus = 20 + (z / 100) * 5;
-      }
-
-      M5.Lcd.print(z / 20);
-      M5.Lcd.setRotation(1);
       break;
     }
   }
